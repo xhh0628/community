@@ -11,6 +11,7 @@ public class TestHelloController {
         @GetMapping("/testSpringbootStart")
         public String testSpringbootStart(@RequestParam(name="name", required=false, defaultValue="World?") String name, Model model) {
             model.addAttribute("name", name);
+            System.out.println("111");
             return "testSpringbootStart";
         }
 
