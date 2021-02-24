@@ -32,7 +32,7 @@
                <div class="media-body">
                     <h5 class="media-heading">
                         <!--<span style="color: #c74747" th:if="${question.sticky >= 1}">[置顶] </span><a th:href="@{'/question/'+ ${question.id}}" th:text="${question.title}"></a>-->
-                        <span th:text="${question.title}"></span>
+                        <a th:href="@{'/question/'+${question.id}}"  th:text="${question.title}"></a>
                     </h5>
                    <span th:text="${question.description}"></span> <br>
                     <span class="text-desc">

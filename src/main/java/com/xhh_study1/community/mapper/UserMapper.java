@@ -1,10 +1,7 @@
 package com.xhh_study1.community.mapper;
 
 import com.xhh_study1.community.model.User;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 @Mapper
 public interface UserMapper {
@@ -16,5 +13,11 @@ public interface UserMapper {
     User findByToken(@Param("token") String token);
 
     @Select("select * from user where id=#{id}")
-    User findById(Integer id);
+    User findById(@Param("id")Integer id);
+
+    @Select("select * from user where account_id=#{accountId}")
+    User findByAccountId(@Param("accountId")String accountId);
+
+    @Update("update user set gmt_Modified=#{gmtModified},name=#{name},token=#{token},avatar_url=#{avatarUrl},bio=#{bio} where account_id=#{accountId}")
+    void update(User dbUser);
 }
