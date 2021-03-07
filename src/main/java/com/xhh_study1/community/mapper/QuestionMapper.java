@@ -1,6 +1,5 @@
 package com.xhh_study1.community.mapper;
 
-import com.xhh_study1.community.dto.QuestionDTO;
 import com.xhh_study1.community.model.Question;
 import org.apache.ibatis.annotations.*;
 
@@ -31,5 +30,8 @@ public interface QuestionMapper {
     Question getById(@Param("id")Integer id);
 
     @Update("update question set gmt_Modified=#{gmtModified},title=#{title},description=#{description},tag=#{tag} where id=#{id}")
-    void update(Question question);
+    int update(Question question);
+
+    @Update("update question set view_count=view_count+#{viewCount} where id=#{id}")
+    void updateQuestionCount(Question question);
 }

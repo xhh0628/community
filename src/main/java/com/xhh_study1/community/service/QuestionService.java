@@ -2,6 +2,8 @@ package com.xhh_study1.community.service;
 
 import com.xhh_study1.community.dto.PaginationDTO;
 import com.xhh_study1.community.dto.QuestionDTO;
+import com.xhh_study1.community.exception.CustomizeErrorCode;
+import com.xhh_study1.community.exception.CustomizeException;
 import com.xhh_study1.community.mapper.QuestionMapper;
 import com.xhh_study1.community.mapper.UserMapper;
 import com.xhh_study1.community.model.Question;
@@ -92,6 +94,9 @@ public class QuestionService {
 
     public QuestionDTO getById(Integer id) {
         Question question=questionMapper.getById(id);
+        if (question==null){
+            throw  new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
+        }
         QuestionDTO questionDTO=new QuestionDTO();
         BeanUtils.copyProperties(question,questionDTO);
         User user= userMapper.findById(question.getCreator());
@@ -106,7 +111,18 @@ public class QuestionService {
             questionMapper.create(question);
         }else {
             question.setGmtModified(System.currentTimeMillis());
-            questionMapper.update(question);
+            int update=questionMapper.update(question);
+            if (update!=1){
+                throw  new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
+            }
         }
     }
+
+    public void incView(Integer id) {
+        Question record=new Question();
+        record.setId(id);
+        record.setViewCount(1);
+        questionMapper.updateQuestionCount(record);
+        }
+
 }
