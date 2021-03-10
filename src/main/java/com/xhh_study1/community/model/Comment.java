@@ -7,7 +7,7 @@ public class Comment {
 
     private Long parentId;
 
-    private Integer commentator;
+    private Long commentator;
 
     private Integer type;
 

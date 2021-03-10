@@ -21,17 +21,20 @@ public interface QuestionMapper {
     Integer count();
 
     @Select("select * from question where creator=#{userId} limit #{offSet},#{size}")
-    List<Question> listByUserId(@Param("userId")Integer userId,@Param(value ="offSet" ) Integer offSet,@Param(value ="size" )Integer size);
+    List<Question> listByUserId(@Param("userId")Long userId,@Param(value ="offSet" ) Integer offSet,@Param(value ="size" )Integer size);
 
     @Select("select count(1) from question where creator=#{userId}")
-    Integer countByUserId(@Param("userId")Integer userId);
+    Integer countByUserId(@Param("userId")Long userId);
 
     @Select("select * from question where id=#{id}")
-    Question getById(@Param("id")Integer id);
+    Question getById(@Param("id")Long id);
 
     @Update("update question set gmt_Modified=#{gmtModified},title=#{title},description=#{description},tag=#{tag} where id=#{id}")
     int update(Question question);
 
     @Update("update question set view_count=view_count+#{viewCount} where id=#{id}")
     void updateQuestionCount(Question question);
+
+    @Update("update question set comment_count=comment_count+#{commentCount} where id=#{id}")
+    void updateCommentCount(Question question);
 }

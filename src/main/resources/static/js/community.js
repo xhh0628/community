@@ -8,12 +8,14 @@
 function post() {
     var questionId = $("#question_id").val();
     var content = $("#comment_content").val();
+    console.log(questionId)
+    console.log(content)
     comment2target(questionId, 1, content);
 }
 
 function comment2target(targetId, type, content) {
     if (!content) {
-        alert("不能回复空内容~~~");
+        +alert("不能回复空内容~~~");
         return;
     }
 
@@ -27,8 +29,11 @@ function comment2target(targetId, type, content) {
             "type": type
         }),
         success: function (response) {
+            debugger;
             if (response.code == 200) {
-                window.location.reload();
+                //window.location.reload();
+                   $("#comment_section").hide();
+
             } else {
                 if (response.code == 2003) {
                     var isAccepted = confirm(response.message);
