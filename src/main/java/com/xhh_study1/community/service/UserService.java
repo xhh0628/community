@@ -14,8 +14,8 @@ public class UserService {
     public void createOrUpdate(User user) {
         User dbUser = userMapper.findByAccountId(user.getAccountId());
         if (dbUser==null){
-            user.setGmtCreat(System.currentTimeMillis());//创建时间
-            user.setGmtModified(user.getGmtCreat());
+            user.setGmtCreate(System.currentTimeMillis());//创建时间
+            user.setGmtModified(user.getGmtCreate());
             userMapper.insert(user);
         }else{
             dbUser.setGmtModified(System.currentTimeMillis());
