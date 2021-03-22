@@ -6,7 +6,6 @@
  * 提交回复
  */
 function post() {
-    debugger;
     var questionId = $("#question_id").val();
     var content = $("#comment_content").val();
     comment2target(questionId, 1, content);
@@ -28,7 +27,6 @@ function comment2target(targetId, type, content) {
             "type": type
         }),
         success: function (response) {
-            debugger;
             if (response.code == 200) {
                 window.location.reload();
                 //   $("#comment_section").hide();
@@ -50,6 +48,7 @@ function comment2target(targetId, type, content) {
 }
 
 function comment(e) {
+    debugger;
     var commentId = e.getAttribute("data-id");
     var content = $("#input-" + commentId).val();
     comment2target(commentId, 2, content);
@@ -59,6 +58,7 @@ function comment(e) {
  * 展开二级评论
  */
 function collapseComments(e) {
+    debugger;
     var id = e.getAttribute("data-id");
     var comments = $("#comment-" + id);
 
@@ -71,13 +71,19 @@ function collapseComments(e) {
         e.classList.remove("active");
     } else {
         var subCommentContainer = $("#comment-" + id);
-        if (subCommentContainer.children().length != 1) {
+        //展开二级评论
+        comments.addClass("in");
+        // 标记二级评论展开状态
+        e.setAttribute("data-collapse", "in");
+        e.classList.add("active");
+     if (subCommentContainer.children().length != 1) {
             //展开二级评论
             comments.addClass("in");
             // 标记二级评论展开状态
             e.setAttribute("data-collapse", "in");
             e.classList.add("active");
         } else {
+            //获取评论
             $.getJSON("/comment/" + id, function (data) {
                 $.each(data.data.reverse(), function (index, comment) {
                     var mediaLeftElement = $("<div/>", {

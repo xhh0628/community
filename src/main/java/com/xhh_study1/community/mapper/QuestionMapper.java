@@ -14,7 +14,7 @@ public interface QuestionMapper {
             "#{tag},#{description})")
     void create(Question qusetion);
 
-    @Select("select * from question limit #{offSet},#{size}")
+    @Select("select * from question order by gmt_create desc limit #{offSet},#{size} ")
     List<Question> list(@Param(value ="offSet" ) Integer offSet,@Param(value ="size" )Integer size);
 
     @Select("select count(1) from question")
@@ -37,4 +37,8 @@ public interface QuestionMapper {
 
     @Update("update question set comment_count=comment_count+#{commentCount} where id=#{id}")
     void updateCommentCount(Question question);
+
+
+    @Select("select * from question where id !=#{id} and tag regexp #{tag}")
+    List<Question> selectRelated(Question question);
 }

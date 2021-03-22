@@ -2,12 +2,11 @@ package com.xhh_study1.community.service;
 
 import com.xhh_study1.community.dto.CommentDTO;
 import com.xhh_study1.community.enums.CommentTypeEnum;
+import com.xhh_study1.community.enums.NotificationStatusEnum;
+import com.xhh_study1.community.enums.NotificationTypeEnum;
 import com.xhh_study1.community.exception.CustomizeErrorCode;
 import com.xhh_study1.community.exception.CustomizeException;
-import com.xhh_study1.community.mapper.CommentMapper;
-import com.xhh_study1.community.mapper.CommentXmlMapper;
-import com.xhh_study1.community.mapper.QuestionMapper;
-import com.xhh_study1.community.mapper.UserXmlMapper;
+import com.xhh_study1.community.mapper.*;
 import com.xhh_study1.community.model.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +34,9 @@ public class CommentService {
     @Autowired
     private CommentXmlMapper commentXmlMapper;
 
+    @Autowired
+    private NotificationMapper notificationMapper;
+
     @Transactional
     public void insert(Comment comment) {
 
@@ -53,6 +55,14 @@ public class CommentService {
                 throw new CustomizeException(CustomizeErrorCode.COMMENT_NOT_FOUND);
             }
             commentMapper.insert(comment);
+            //增加评论数
+            Comment parentComment = new Comment();
+            parentComment.setId(comment.getParentId());
+            parentComment.setCommentCount(1);
+            commentMapper.updateCommentCount(parentComment);
+
+            //增加通知
+            createNotify(comment, dbComment.getCommentator(), NotificationTypeEnum.REPLY_COMMENT);
         }else{
             //回复问题
             Question question=questionMapper.getById(comment.getParentId());
@@ -62,15 +72,30 @@ public class CommentService {
             commentMapper.insert(comment);
             question.setCommentCount(1);
             questionMapper.updateCommentCount(question);
+
+            //增加通知
+            createNotify(comment, question.getCreator(), NotificationTypeEnum.REPLY_QUESTION);
+
         }
     }
 
-    public List<CommentDTO> listByQuestionId(Long id) {
+    private void createNotify(Comment comment, Long receiver, NotificationTypeEnum notificationType) {
+        Notification notification = new Notification();
+        notification.setGmtCreate(System.currentTimeMillis());
+        notification.setType(notificationType.getType());
+        notification.setOuterid(comment.getParentId());
+        notification.setNotifier(comment.getCommentator());
+        notification.setStatus(NotificationStatusEnum.UNREAD.getStatus());
+        notification.setReceiver(receiver);
+        notificationMapper.insert(notification);
+    }
+
+    public List<CommentDTO> listByTargetId(Long id, CommentTypeEnum type) {
         CommentExample commentExample = new CommentExample();
         commentExample.createCriteria()
                 .andParentIdEqualTo(id)
-                .andTypeEqualTo(CommentTypeEnum.QUESTION.getType());
-        commentExample.setOrderByClause("gmt_create desc");
+                .andTypeEqualTo(type.getType());
+        commentExample.setOrderByClause("gmt_create asc");
         List<Comment> comments= commentXmlMapper.selectByExample(commentExample);
         if (comments.size()==0) {
             return new ArrayList<>();

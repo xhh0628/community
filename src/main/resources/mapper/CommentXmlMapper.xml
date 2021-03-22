@@ -13,11 +13,10 @@
     <result column="GMT_MODIFIED" jdbcType="BIGINT" property="gmtModified" />
     <result column="LIKE_COUNT" jdbcType="BIGINT" property="likeCount" />
     <result column="CONTENT" jdbcType="VARCHAR" property="content" />
-   <!-- <result column="COMMENT_COUNT" jdbcType="INTEGER" property="commentCount" />-->
+ <result column="COMMENT_COUNT" jdbcType="INTEGER" property="commentCount" />
   </resultMap>
   <sql id="Base_Column_List">
-    ID, PARENT_ID, TYPE, COMMENTATOR, GMT_CREATE, GMT_MODIFIED, LIKE_COUNT, CONTENT/*,
-    COMMENT_COUNT*/
+    ID, PARENT_ID, TYPE, COMMENTATOR, GMT_CREATE, GMT_MODIFIED, LIKE_COUNT, CONTENT,COMMENT_COUNT
   </sql>
 
   <sql id="Example_Where_Clause">

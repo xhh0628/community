@@ -20,8 +20,10 @@
                 <button type="submit" class="btn btn-default">搜索</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li th:if="${session.user !=null}">
+                <li th:if="${session.user != null}">
                     <a href="/publish">发布问题</a>
+                </li>
+                <li><a href="/profile/replies">通知 <span class="badge" th:text="${session.unreadCount}"></span></a>
                 </li>
 
                 <li class="dropdown" th:if="${session.user != null}">

@@ -39,10 +39,10 @@
                     </a>
                 </div>
                <div class="media-body">
-                    <h5 class="media-heading">
+                    <h4 class="media-heading">
                         <!--<span style="color: #c74747" th:if="${question.sticky >= 1}">[置顶] </span><a th:href="@{'/question/'+ ${question.id}}" th:text="${question.title}"></a>-->
                         <a th:href="@{'/question/'+${question.id}}"  th:text="${question.title}"></a>
-                    </h5>
+                    </h4>
                    <span th:text="${question.description}"></span> <br>
                     <span class="text-desc">
                         <span th:text="${question.commentCount}"></span> 个回复 •
