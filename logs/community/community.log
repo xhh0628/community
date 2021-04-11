@@ -1,0 +1,90 @@
+2021-04-11 19:53:07.725  INFO 14980 --- [restartedMain] c.x.community.CommunityApplication       : Starting CommunityApplication using Java 1.8.0_131 on DESKTOP-OEKQMMV with PID 14980 (D:\DevelopmentTool\ide\ideaWorkSpace\community\target\classes started by user in D:\DevelopmentTool\ide\ideaWorkSpace\community)
+2021-04-11 19:53:07.727  INFO 14980 --- [restartedMain] c.x.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2021-04-11 19:53:07.757  INFO 14980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-11 19:53:07.758  INFO 14980 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-11 19:53:07.770  WARN 14980 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-04-11 19:53:08.435  INFO 14980 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-04-11 19:53:08.441  INFO 14980 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-11 19:53:08.441  INFO 14980 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-11 19:53:08.492  INFO 14980 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-11 19:53:08.493  INFO 14980 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 735 ms
+2021-04-11 19:53:08.829  INFO 14980 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-11 19:53:08.904  INFO 14980 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-11 19:53:09.055  INFO 14980 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-11 19:53:09.078  INFO 14980 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-04-11 19:53:09.085  INFO 14980 --- [restartedMain] c.x.community.CommunityApplication       : Started CommunityApplication in 1.606 seconds (JVM running for 2.132)
+2021-04-11 19:53:31.870  INFO 14980 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-11 19:56:37.777  INFO 17552 --- [restartedMain] c.x.community.CommunityApplication       : Starting CommunityApplication using Java 1.8.0_131 on DESKTOP-OEKQMMV with PID 17552 (D:\DevelopmentTool\ide\ideaWorkSpace\community\target\classes started by user in D:\DevelopmentTool\ide\ideaWorkSpace\community)
+2021-04-11 19:56:37.778  INFO 17552 --- [restartedMain] c.x.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2021-04-11 19:56:37.810  INFO 17552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-11 19:56:37.810  INFO 17552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-11 19:56:37.824  WARN 17552 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-04-11 19:56:38.497  INFO 17552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-04-11 19:56:38.503  INFO 17552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-11 19:56:38.503  INFO 17552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-11 19:56:38.554  INFO 17552 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-11 19:56:38.554  INFO 17552 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 743 ms
+2021-04-11 19:56:38.889  INFO 17552 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-11 19:56:38.966  INFO 17552 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-11 19:56:39.118  INFO 17552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-11 19:56:39.139  INFO 17552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-04-11 19:56:39.146  INFO 17552 --- [restartedMain] c.x.community.CommunityApplication       : Started CommunityApplication in 1.618 seconds (JVM running for 2.145)
+2021-04-11 19:56:51.734  INFO 17552 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-11 19:56:51.734  INFO 17552 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-11 19:56:51.734  INFO 17552 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-04-11 19:56:51.772  INFO 17552 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-11 19:56:51.861  INFO 17552 --- [http-nio-8887-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-11 19:56:51.866 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.m.QuestionXmlMapper.countBySearch  : ==>  Preparing: select count(*) from question
+2021-04-11 19:56:51.879 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.m.QuestionXmlMapper.countBySearch  : ==> Parameters: 
+2021-04-11 19:56:51.891 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.m.QuestionXmlMapper.countBySearch  : <==      Total: 1
+2021-04-11 19:56:51.894 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,?
+2021-04-11 19:56:51.895 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2021-04-11 19:56:51.897 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.m.Q.selectBySearch                 : <==      Total: 5
+2021-04-11 19:56:51.898 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.mapper.UserMapper.findById         : ==>  Preparing: select * from user where id=?
+2021-04-11 19:56:51.898 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.mapper.UserMapper.findById         : ==> Parameters: 8(Long)
+2021-04-11 19:56:51.899 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.mapper.UserMapper.findById         : <==      Total: 1
+2021-04-11 19:56:51.903 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.mapper.UserMapper.findById         : ==>  Preparing: select * from user where id=?
+2021-04-11 19:56:51.903 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.mapper.UserMapper.findById         : ==> Parameters: 8(Long)
+2021-04-11 19:56:51.904 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.mapper.UserMapper.findById         : <==      Total: 1
+2021-04-11 19:56:51.904 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.mapper.UserMapper.findById         : ==>  Preparing: select * from user where id=?
+2021-04-11 19:56:51.904 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.mapper.UserMapper.findById         : ==> Parameters: 8(Long)
+2021-04-11 19:56:51.904 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.mapper.UserMapper.findById         : <==      Total: 1
+2021-04-11 19:56:51.905 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.mapper.UserMapper.findById         : ==>  Preparing: select * from user where id=?
+2021-04-11 19:56:51.905 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.mapper.UserMapper.findById         : ==> Parameters: 8(Long)
+2021-04-11 19:56:51.906 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.mapper.UserMapper.findById         : <==      Total: 1
+2021-04-11 19:56:51.906 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.mapper.UserMapper.findById         : ==>  Preparing: select * from user where id=?
+2021-04-11 19:56:51.906 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.mapper.UserMapper.findById         : ==> Parameters: 8(Long)
+2021-04-11 19:56:51.907 DEBUG 17552 --- [http-nio-8887-exec-1] c.x.c.mapper.UserMapper.findById         : <==      Total: 1
+2021-04-11 19:58:48.682  INFO 17552 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-11 19:58:48.683  INFO 17552 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-11 19:58:48.687  INFO 17552 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-11 19:58:48.818  INFO 17552 --- [restartedMain] c.x.community.CommunityApplication       : Starting CommunityApplication using Java 1.8.0_131 on DESKTOP-OEKQMMV with PID 17552 (D:\DevelopmentTool\ide\ideaWorkSpace\community\target\classes started by user in D:\DevelopmentTool\ide\ideaWorkSpace\community)
+2021-04-11 19:58:48.818  INFO 17552 --- [restartedMain] c.x.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2021-04-11 19:58:49.001  INFO 17552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-04-11 19:58:49.002  INFO 17552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-11 19:58:49.002  INFO 17552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-11 19:58:49.017  INFO 17552 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-11 19:58:49.017  INFO 17552 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 197 ms
+2021-04-11 19:58:49.121  INFO 17552 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-11 19:58:49.132  INFO 17552 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-11 19:58:49.159  INFO 17552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-11 19:58:49.166  INFO 17552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-04-11 19:58:49.169  INFO 17552 --- [restartedMain] c.x.community.CommunityApplication       : Started CommunityApplication in 0.377 seconds (JVM running for 132.168)
+2021-04-11 19:58:49.170  INFO 17552 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-11 20:01:34.640  INFO 17552 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-11 20:04:46.849  INFO 12736 --- [restartedMain] c.x.community.CommunityApplication       : Starting CommunityApplication using Java 1.8.0_131 on DESKTOP-OEKQMMV with PID 12736 (D:\DevelopmentTool\ide\ideaWorkSpace\community\target\classes started by user in D:\DevelopmentTool\ide\ideaWorkSpace\community)
+2021-04-11 20:04:46.851  INFO 12736 --- [restartedMain] c.x.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2021-04-11 20:04:46.882  INFO 12736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-11 20:04:46.882  INFO 12736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-11 20:04:46.893  WARN 12736 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-04-11 20:04:47.557  INFO 12736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2021-04-11 20:04:47.563  INFO 12736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-11 20:04:47.564  INFO 12736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-11 20:04:47.618  INFO 12736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-11 20:04:47.618  INFO 12736 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 735 ms
+2021-04-11 20:04:47.955  INFO 12736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-11 20:04:48.032  INFO 12736 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-04-11 20:04:48.183  INFO 12736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-11 20:04:48.204  INFO 12736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2021-04-11 20:04:48.211  INFO 12736 --- [restartedMain] c.x.community.CommunityApplication       : Started CommunityApplication in 1.611 seconds (JVM running for 2.106)
+2021-04-11 20:05:03.778  INFO 12736 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

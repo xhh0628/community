@@ -1,5 +1,6 @@
 package com.xhh_study1.community.mapper;
 
+import com.xhh_study1.community.dto.QuestionQueryDTO;
 import com.xhh_study1.community.model.Question;
 import com.xhh_study1.community.model.QuestionExample;
 import org.apache.ibatis.annotations.Mapper;
@@ -138,4 +139,8 @@ public interface QuestionXmlMapper {
      * @mbg.generated Sun Jan 10 02:53:25 CST 2021
      */
     int updateByPrimaryKey(Question record);
+
+    Integer countBySearch(QuestionQueryDTO questionQueryDTO);
+
+    List<Question> selectBySearch(QuestionQueryDTO questionQueryDTO);
 }

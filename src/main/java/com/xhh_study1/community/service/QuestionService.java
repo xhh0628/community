@@ -2,6 +2,7 @@ package com.xhh_study1.community.service;
 
 import com.xhh_study1.community.dto.PaginationDTO;
 import com.xhh_study1.community.dto.QuestionDTO;
+import com.xhh_study1.community.dto.QuestionQueryDTO;
 import com.xhh_study1.community.exception.CustomizeErrorCode;
 import com.xhh_study1.community.exception.CustomizeException;
 import com.xhh_study1.community.mapper.QuestionMapper;
@@ -33,10 +34,22 @@ public class QuestionService {
     private QuestionXmlMapper questionXmlMapper;
 
 
-    public PaginationDTO list(Integer page, Integer size) {
+    public PaginationDTO list(Integer page, Integer size, String search) {
+
+
+        if (StringUtils.isNotBlank(search)){
+            String[] tags = StringUtils.split(search, " ");
+            search=Arrays.stream(tags).collect(Collectors.joining("|"));
+        }
+
+
         Integer totalPage;
         PaginationDTO paginationDTO = new PaginationDTO();
-        Integer totalCount = questionMapper.count();
+
+        QuestionQueryDTO questionQueryDTO=new QuestionQueryDTO();
+        questionQueryDTO.setSearch(search);
+        Integer totalCount = questionXmlMapper.countBySearch(questionQueryDTO);
+
         if(totalCount % size == 0){
             totalPage=totalCount / size;
         }else{
@@ -53,7 +66,9 @@ public class QuestionService {
         paginationDTO.setPagination(totalPage,page);
         //size*(page-1)
         Integer offSet=size*(page-1);
-        List<Question> questions = questionMapper.list(offSet,size);
+        questionQueryDTO.setSize(size);
+        questionQueryDTO.setPage(offSet);
+        List<Question> questions = questionXmlMapper.selectBySearch(questionQueryDTO);
         List<QuestionDTO> questionDTOList=new ArrayList<>();
         for (Question question : questions) {
            User user= userMapper.findById(question.getCreator());

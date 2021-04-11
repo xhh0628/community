@@ -57,31 +57,31 @@
                 <ul class="pagination">
                     <!--首页-->
                     <li ><!--th:if="${pagination.showFirstPage}"-->
-                        <a href="/" th:href="@{/(page=1)}" aria-label="Previous">
+                        <a href="/" th:href="@{/(page=1,search=${search})}" aria-label="Previous">
                             <span aria-hidden="true">&lt;&lt;</span>
                         </a>
                     </li>
                     <!--上一页-->
                     <li th:if="${pagination.showPrevious}">
-                        <a href="/" th:href="@{/(page=${pagination.page - 1})}" aria-label="Previous">
+                        <a href="/" th:href="@{/(page=${pagination.page - 1},search=${search})}" aria-label="Previous">
                             <span aria-hidden="true">&lt;</span>
                         </a>
                     </li>
 
                     <li th:each="page:${pagination.pages}" th:class="${pagination.page==page}?'active':''">
-                        <a href="/" th:href="@{/(page=${page})}" th:text="${page}" ></a>
+                        <a href="/" th:href="@{/(page=${page},search=${search})}" th:text="${page}" ></a>
                     </li>
 
                     <!--下一页-->
                     <li th:if="${pagination.showNext}">
-                        <a href="/" th:href="@{/(page=${pagination.page + 1})}"  aria-label="Previous">
+                        <a href="/" th:href="@{/(page=${pagination.page + 1},search=${search})}"  aria-label="Previous">
                             <span aria-hidden="true">&gt;</span>
                         </a>
                     </li>
 
                     <!--尾页-->
                     <li ><!--th:if="${pagination.showEndPage}"-->
-                        <a href="/" th:href="@{/(page=${pagination.totalPage})}" aria-label="Previous">
+                        <a href="/" th:href="@{/(page=${pagination.totalPage},search=${search})}" aria-label="Previous">
                             <span aria-hidden="true">&gt;&gt;</span>
                         </a>
                     </li>
@@ -91,13 +91,16 @@
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
             <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h4>热门标签</h4>
-
+                <h4>热门标签11</h4>
+                <h4>热门标签22</h4>
+                <h4>热门标签33-</h4>
             </div>
 
         </div>
     </div>
 </div>
 
+
+<div th:insert="~{footer :: foot}"></div>
 </body>
 </html>

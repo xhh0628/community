@@ -1,7 +1,9 @@
 package com.xhh_study1.community.controller;
 
 
+import com.xhh_study1.community.ImgMessage.ImgMessage;
 import com.xhh_study1.community.dto.FileDTO;
+import com.xhh_study1.community.service.FileService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,30 +20,29 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 @Slf4j
 public class FileController {
-/*    @Autowired
-    private UFileService uFileService;*/
 
-    @RequestMapping("/file/upload")
+    @Autowired
+    private FileService fileService;
+
+/*    @RequestMapping("/file/upload")
     @ResponseBody
     public FileDTO upload(HttpServletRequest request) {
-/*        MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
-        MultipartFile file = multipartRequest.getFile("editormd-image-file");
-        try {
-            UFileResult uFileResult = uFileService.upload(file.getInputStream(), file.getContentType(), file.getOriginalFilename());
-            FileDTO fileDTO = new FileDTO();
-            fileDTO.setSuccess(1);
-            fileDTO.setUrl(uFileResult.getFileUrl());
-            return fileDTO;
-        } catch (Exception e) {
-            log.error("upload error", e);
-            FileDTO fileDTO = new FileDTO();
-            fileDTO.setSuccess(0);
-            fileDTO.setMessage("上传失败");
-            return fileDTO;
-        }*/
+
         FileDTO fileDTO = new FileDTO();
         fileDTO.setSuccess(1);
         fileDTO.setUrl("/images/default-avatar.png");
         return fileDTO;
+    }*/
+
+    @RequestMapping("/file/alOss")
+    @ResponseBody
+    public FileDTO alOssTest(HttpServletRequest request) {
+        MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+        MultipartFile uploadFile = multipartRequest.getFile("editormd-image-file");
+        return fileService.upload(uploadFile);
+
+
     }
+
+
 }
